@@ -21,3 +21,9 @@ http://localhost:8080
 Submit form and follow links or just go to the following URL to get Bob Villa's address:
 
 http://localhost:8080/api/customers/1.json
+
+Tests:
+--------
+To run tests:
+
+mvn clean install
