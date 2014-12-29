@@ -7,11 +7,13 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.CookieParam;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.HeaderParam;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -103,4 +105,19 @@ public class CustomerResource
               .build();
    }
 
+   @PUT
+   @Path("{id}")
+   @Consumes(MediaType.APPLICATION_JSON)
+   public void updateCustomer(@PathParam("id") int id, Customer update)
+   {
+      Customer current = customerDB.get(id);
+      if (current == null) throw new WebApplicationException(Response.Status.NOT_FOUND);
+
+      current.setFirstName(update.getFirstName());
+      current.setLastName(update.getLastName());
+      current.setStreet(update.getStreet());
+      current.setState(update.getState());
+      current.setZip(update.getZip());
+      current.setCountry(update.getCountry());
+   }
 }
