@@ -1,6 +1,6 @@
-Injection Annotations
-=====================
-This project is a simple example showing usage of JAX-RS injection annotations.
+JAXRS 2.0 Simple Starter Project
+================================
+This project demonstrates how to implement a very simple web service and is intended to be used as a starter project for new RESTful APIs.
 
 System Requirements:
 -------------------------
