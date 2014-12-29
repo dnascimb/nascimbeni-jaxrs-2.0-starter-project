@@ -16,11 +16,12 @@
             <artifactId>resteasy-jaxrs</artifactId>
             <version>3.0.10.Final</version>
         </dependency>
-        <dependency>
+<!--         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-client</artifactId>
             <version>3.0.10.Final</version>
         </dependency>
+-->
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>async-http-servlet-3.0</artifactId>
@@ -31,7 +32,7 @@
             <artifactId>jaxrs-api</artifactId>
             <version>3.0.10.Final</version>
         </dependency>
-        <dependency>
+         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-servlet-initializer</artifactId>
             <version>3.0.10.Final</version>
@@ -50,7 +51,7 @@
     </dependencies>
 
     <build>
-        <finalName>ex05_2</finalName>
+        <finalName>JAXRS-Example</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

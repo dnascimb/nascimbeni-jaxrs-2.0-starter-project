@@ -45,7 +45,7 @@ public class CustomerResource
    @Produces(MediaType.APPLICATION_JSON)
    public Response getCustomer(@PathParam("id") int id)
    {
-	  ResponseBuilder responseBuilder = Response.status(Response.Status.INTERNAL_SERVER_ERROR);
+	 ResponseBuilder responseBuilder = Response.status(Response.Status.INTERNAL_SERVER_ERROR);
 	  
 	 Customer customer = new Customer();
 	 customer.setId(id);
@@ -57,8 +57,8 @@ public class CustomerResource
 	 customer.setStreet("1201 Parkmoor Ave");
 	 customer.setZip("95126");
 	
-	  responseBuilder = responseBuilder.status(Response.Status.OK).entity(customer);
-	  return responseBuilder.build();
+	 responseBuilder = responseBuilder.status(Response.Status.OK).entity(customer);
+	 return responseBuilder.build();
    }
    
    @POST
